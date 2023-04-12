@@ -1,0 +1,51 @@
+.scanner {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+}
+.scanner .scanner-corner {
+    position: relative;
+}
+.scanner .scanner-corner .corner {
+    animation: zoom 2s infinite;
+}
+.scanner .scanner-corner .inner-img {
+    top: 20%;
+    left: 20%;
+    z-index: 10;
+    position: absolute;
+}
+.scanner .scanner-corner .scanner-bar {
+    height: 3px;
+    z-index: -1;
+    top: 10px;
+    left: -13px;
+    right: 0;
+    width: 80%;
+    background-color: #000;
+    animation: scanning 2s infinite;
+    margin: auto;
+    position: absolute;
+}
+@keyframes scanning {
+    0%, 100% {
+        transform: translateY(250px);
+   }
+    50% {
+        transform: translateY(0%);
+   }
+    75% {
+        transform: translateY(250px);
+   }
+}
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1.1);
+   }
+    50% {
+        transform: scale(1);
+   }
+    75% {
+        transform: scale(1.1);
+   }
+}
